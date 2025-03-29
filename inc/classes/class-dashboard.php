@@ -75,7 +75,7 @@ class Dashboard
     {
         global $wp_version;
         $theme = wp_get_theme();
-        $text = $text . "<span id='goug-admin-footer'>Powered By <strong>Goug Lab</strong> | ";
+        $text = "<span id='goug-admin-footer'>Powered By <strong>Goug Lab</strong> | ";
         $text = $text . "WordPress: " . $wp_version . " | ";
         $text = $text . "Theme: " . $theme->get('Name') . " | ";
         $text = $text . "Made with ❤️</span>";
