@@ -49,11 +49,11 @@ The template follows **OOP best practices**, using **singleton classes** to ensu
 2. Locate the `Template` line:
 
 ```css
-Template: <changeme>
+Template: parent-theme-folder-name
 ```
 
 
-3. Replace `<changeme>` with the **exact folder name** of the parent theme.
+3. Replace `parent-theme-folder-name` with the **exact folder name** of the parent theme.
 4. Change `Theme Name:` to something memorable, e.g.,
 
 ```css
@@ -84,7 +84,7 @@ This template **removes the WordPress logo** and replaces it with a **custom log
 To change the logo, **replace the file**:  
 📌 `assets/images/homelab.webp` with your own image.
 
-If needed, modify the file path inside **`class-goug-dashboard.php`**:
+If needed, modify the file path inside **`class-dashboard.php`**:
 
 ```
 $custom_icon_url = get_stylesheet_directory_uri() . '/assets/images/your-logo.png';
@@ -106,8 +106,8 @@ This template allows you to **add widgets to the admin dashboard** just like the
 ### 5️⃣ Modifying & Extending the Theme
 
 - PHP is structured in **classes** inside `/inc/classes/` for easy management.
-- SCSS files are available inside `/assets/scss/`, requiring **NPM packages** to compile.
-- JavaScript follows an **object-oriented approach** and is located inside `/assets/js/`.
+- SCSS files are available inside `/src/scss/`, requiring **NPM packages** to compile.
+- JavaScript follows an **object-oriented approach** and is located inside `/src/js/`.
 
 ---
 
