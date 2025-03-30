@@ -18,7 +18,9 @@ echo '</div>';
 ?>
 <div class="wrap goug-dashboard">
     <div class="goug-conainer goug-dashboard-header">
-        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/homelab.webp') ?>" alt="Goug's Home Lab Logo">
+        <a href="<?php echo GOUG_LAB_URL; ?>" target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/homelab.webp') ?>" alt="Goug's Home Lab Logo">
+        </a>
         <h1>Hi <?php echo esc_html( $user_name ); ?>, Welcome to <?php echo get_bloginfo('name'); ?>'s Dashboard</h1>
         <p>This is your personalized admin area where you can manage everything at a glance.</p>
     </div> <!-- End goug-dashboard-header -->
