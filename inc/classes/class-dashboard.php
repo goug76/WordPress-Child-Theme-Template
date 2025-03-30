@@ -13,6 +13,14 @@ class Dashboard
     protected function __construct() 
     { 
         /**
+		 * Load Globals
+		 */
+        
+        if ( ! defined( 'GOUG_LAB_URL' ) ) {
+            define( 'GOUG_LAB_URL', 'https://gouglab.com' );
+        }
+
+        /**
 		 * Load Classes
 		 */
  

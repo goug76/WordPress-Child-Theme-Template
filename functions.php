@@ -16,8 +16,4 @@ if ( ! defined( 'GOUG_DIR_PATH' ) ) {
 	define( 'GOUG_DIR_PATH', untrailingslashit( get_stylesheet_directory() ) );
 }
 
-if ( ! defined( 'GOUG_LAB_URL' ) ) {
-	define( 'GOUG_LAB_URL', 'https://gouglab.com' );
-}
-
 \GOUG\Inc\GOUG_THEME::get_instance();
