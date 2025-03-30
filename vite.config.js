@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/": {
-        target: "http://site-name.local", // Your Flywheel Local site
+        target: "http://gouglab.local", // Your Flywheel Local site
         changeOrigin: true,
         secure: false, // Allow self-signed SSL
         ws: true,
@@ -32,6 +32,7 @@ export default defineConfig({
         theme_js: path.resolve(themePath, "src/js/script.js"),
         theme_css: path.resolve(themePath, "src/scss/style.scss"),
         admin_css: path.resolve(themePath, "src/scss/admin_style.scss"),
+        admin_js: path.resolve(themePath, "src/js/admin_script.js"),
       },
       output: {
         entryFileNames: "[name].js", // Ensures correct JS naming

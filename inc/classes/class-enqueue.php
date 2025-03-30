@@ -67,5 +67,11 @@ class Enqueue
 
         // Enqueue CSS Stylesheets
         wp_enqueue_style('admin_style');
+
+        // Registering JS Scripts
+        wp_register_script('admin-js', get_stylesheet_directory_uri() . '/dist/admin_js.js', [], $this->theme_version, true);
+
+        // Enqueue JS Scripts
+        wp_enqueue_script('admin-js');
     }
 }

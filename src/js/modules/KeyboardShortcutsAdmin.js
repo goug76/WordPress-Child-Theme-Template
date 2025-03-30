@@ -1,6 +1,6 @@
 const $ = window.jQuery;
 
-export default class KeyboardShortcuts {
+export default class KeyboardShortcutsAdmin {
     constructor() {
         this.events();
     }
@@ -17,8 +17,8 @@ export default class KeyboardShortcuts {
             let urlObj = new URL(window.location.href);
             let cleanBaseURL = `${urlObj.protocol}//${urlObj.hostname}`; // Removes port
 
-            // If on frontend, go to the WordPress admin page
-            window.location.href = `${cleanBaseURL}/wp-admin`;
+            // If in admin area, go back to the site homepage
+            window.location.href = cleanBaseURL;
         }
     }
 }
