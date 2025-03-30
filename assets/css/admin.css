@@ -162,15 +162,6 @@ body.goug-dashboard-page #goug-admin-footer {
     color: white;
 }
 
-#footer-left {
-    width: 100%;
-    text-align: center;
-}
-
-#goug-admin-footer {
-    font-size: 16px;
-}
-
 #admin-dashboard-widgets {
     background: #f1f1f1;
     padding: 20px;
@@ -192,4 +183,26 @@ body.goug-dashboard-page #goug-admin-footer {
 .widget-title {
     font-size: 16px;
     font-weight: bold;
+}
+
+.goug-notices {
+    position: relative;
+    top: -20px; /* Adjust as needed */
+    width: 100%;
+    z-index: 999;
+    margin-bottom: 20px;
+}
+.goug-notices .notice {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #0073aa; /* Default WP Blue */
+}
+
+#footer-left {
+    width: 100%;
+    text-align: center;
+}
+
+#goug-admin-footer {
+    font-size: 16px;
 }

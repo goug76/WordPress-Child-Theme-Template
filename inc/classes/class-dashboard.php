@@ -25,6 +25,7 @@ class Dashboard
 		 * Actions
 		 */
 
+        add_action('admin_notices', array( $this, 'remove_admin_duplicates' ), 1 );
         add_action('admin_menu', array( $this, 'replace_dashboard_with_template' ) );
         add_action('load-index.php', array( $this, 'redirect_dashboard' ) );
         add_filter('admin_body_class', array( $this, 'add_dashboard_body_class' ) );
@@ -33,6 +34,14 @@ class Dashboard
         add_action('admin_bar_menu', array( $this, 'add_custom_logo' ) );
         add_action('admin_bar_menu', array( $this, 'remove_wp_logo' ), 999 );
         add_action('widgets_init', array( $this, 'register_admin_widget_area' ));        
+    }
+
+    public function remove_admin_duplicates()
+    {
+        if (get_current_screen()->id === 'toplevel_page_my-dashboard') {
+            remove_all_actions('admin_notices'); // Removes duplicate calls
+            do_action('admin_notices'); // Adds back a single instance
+        }
     }
 
     public function replace_dashboard_with_template() {

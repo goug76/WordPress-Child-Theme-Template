@@ -9,6 +9,12 @@ defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 $current_user = wp_get_current_user();
 $user_name = $current_user->display_name; // Full name or username
 
+// Ensure notices appear before anything else
+echo '<div class="goug-notices">';
+do_action('admin_notices'); // Standard notices
+do_action('all_admin_notices'); // Some plugins use this
+echo '</div>';
+
 ?>
 <div class="wrap goug-dashboard">
     <div class="goug-conainer goug-dashboard-header">
